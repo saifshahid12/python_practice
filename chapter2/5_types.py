@@ -1,3 +1,4 @@
+
 #type function use to find the datatype of given variable :
 
 a = 3
