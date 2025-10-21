@@ -1,0 +1,6 @@
+# read ()
+# write()
+# open ()
+# close()
+# read line()
+# read lines()
