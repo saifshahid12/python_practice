@@ -1,13 +1,22 @@
+         
+    # create a class employee and add sallery and increments properties to it :
 
-    # create a class with class attribute a:create an object from it and set "a":
-    # directly using object .a =0 does this change the class attribute:
+class employee:
+    sallery=234
+    increment=20
+e= employee()
+print(f"the sallery is :{e.sallery}")
+print(f"the increment is :{e.increment}")
 
-class demo:
-     a= 4
+print("--------------------------------------------------")
 
-o = demo()
-print(o.a)
-                    # not chang class because instance value not give:
-o.a = 0
-print(o.a)
+    # write a method salleryafterincrement method with  @property decorator with a setter which changes the increment value :
+class employee:
+    sallery=234
+    increment=20
 
+    @property
+    def salleryafterincrement(self):
+        return self.sallery + (self.sallery * self.increment)/100
+e= employee()
+print(f"the sallery after increment is :{e.salleryafterincrement}")

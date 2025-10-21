@@ -1,17 +1,26 @@
+  # create a class (2d vector) and use it to create another class 
+  # representing (3d vector):
 
-    # create a class "programmer" for storing information of few programmers workin in 
-    # microsoft :
 
-class programmer:
-    company ="microsoft"
-    def __init__( self,name,sallery,pin):
+class towDvector:
+  def __init__(self,i ,j):
+    self.i =i
+    self.j =j
 
-        self.name = name
-        self.sallery = sallery
-        self.pin = pin
+  def show (self):
+    print(f"the vector is :{self.i}i +{self.j}j")
 
-p = programmer("saif",12000,234)
-print(p.name, p.sallery, p.pin, p.company)
 
-r = programmer("rohan",10000,800)
-print(r.name, r.sallery, r.pin, r.company)
+class threeDvector(towDvector):
+  def __init__(self, i, j, k):
+    super().__init__(i ,j)
+    self.k = k
+
+  def show(self):
+      print(F"the vector is :{self.i}i +{self.j} +{self.k}k")
+
+a=towDvector(1, 2)
+a.show()
+b=threeDvector(5,2,3,)
+b.show()
+

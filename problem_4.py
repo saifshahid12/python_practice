@@ -1,27 +1,15 @@
+    # write class "complex" to represent complex number along with overload method
+    # + and * which adds and multiplies numbers:
+class complex:
+    def __init__(self, r, i):
+        self.r =r
+        self.i =i
+    def __add__(self,c2):
+        return complex(self.r + c2.r , self.i +c2.i)
 
-    # add a staticmethid :
+    def __str__(self):
+        return f"{self.r} + {self.i}"
 
-
-class calculator:
-    def __init__(self,n):
-        self.n=n
-
-    def square(self) :
-        print(f"the square is :{self.n*self.n}")
-
-    def cube(self):
-        print(f"the qube is :{self.n*self.n*self.n}")
-
-    def squareroot(self):
-        print(f"the square root is :{self.n**1/2}")
-
-    @staticmethod       # also called decorator method :
-    def hello():
-        print("good morning!")
-
-
-a = calculator(4)
-a.hello()
-a.square()
-a.cube()
-a.squareroot()
+c1=complex(1 , 2)
+c2=complex(3 , 4)
+print(c1+c2)
